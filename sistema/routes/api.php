@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::middleware('auth:api', 'throttle:60,1')->group(function () {
+    Route::apiResources([
+        'condominios'=>'CondominiosController',
+        'invitado'=>'InvitadoController'
+    ]);
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

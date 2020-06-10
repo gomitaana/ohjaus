@@ -24,7 +24,7 @@ class CreateCondominiosTable extends Migration
             $table->enum('statusCondominio', ['Activo', 'Inactivo'])->default('Activo');
             $table->unsignedBigInteger('fkUsuarioCondominio');
             $table->timestamps();
-            $table->foreign('fkUsuarioCondominio')->references('idUsuario')->on('users');
+            $table->foreign('fkUsuarioCondominio')->references('id')->on('users');
         });
     }
 

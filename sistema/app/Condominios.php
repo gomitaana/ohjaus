@@ -31,7 +31,7 @@ class Condominios extends Model
 
     public function contratos()
     {
-        return $this->hasOne('App\Contractor', 'fkCondominioContrato');
+        return $this->hasOne('App\Contratos', 'fkCondominioContrato');
     }
     public function users()
     {
