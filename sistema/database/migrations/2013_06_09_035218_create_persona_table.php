@@ -21,6 +21,10 @@ class CreatePersonaTable extends Migration
             $table->enum('generoPersona', ['Femenino', 'Masculino', 'Otro']);
             $table->date('fechaNacimientoPersona');
             $table->enum('statusPersona', ['Activo','Inactivo'])->default('Activo');
+            $table->enum('tipoUsuario',['AdminMaster','Admin','Usuario','Vigilante']);
+            $table->unsignedBigInteger('fkFotoPerfilUsuario');
+            $table->foreignId('user_id')->constrained();
+            $table->foreign('fkFotoPerfilUsuario')->references('idArchivo')->on('archivos');
             $table->timestamps();
         });
     }

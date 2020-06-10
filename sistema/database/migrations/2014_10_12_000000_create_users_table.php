@@ -14,19 +14,13 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('idUsuario');
-            $table->string('nombreClaveUsuario');
-            $table->string('emailUsuario')->unique();
-            $table->timestamp('emailUsuario_verified_at')->nullable();
-            $table->string('passwordUsuario');
-            $table->enum('tipoUsuario',['AdminMaster','Admin','Usuario','Vigilante']);
-            $table->unsignedBigInteger('fkPersonaUsuario');
-            $table->unsignedBigInteger('fkFotoPerfilUsuario');
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->enum('statusUsuario', ['Activo','Inactivo'])->default('Activo');
-            $table->foreign('fkPersonaUsuario')->references('idPersona')->on('persona');
-            $table->foreign('fkFotoPerfilUsuario')->references('idArchivo')->on('archivos');
         });
     }
 
