@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api', 'throttle:60,1')->group(function () {
     Route::apiResources([
         'condominios'=>'CondominiosController',
-        'invitado'=>'InvitadoController'
+        'invitado'=>'InvitadoController',
+        'contratos'=>'ContratosController'
     ]);
 });
 
