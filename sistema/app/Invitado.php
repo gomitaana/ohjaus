@@ -31,11 +31,11 @@ class Invitado extends Model
 
     public function invitadosfrecuentes()
     {
-        return $this->hasOne('App\invitadosfrecuentes', 'fkInvitadoFrecuente');
+        return $this->hasOne('App\Invitadosfrecuentes', 'fkInvitadoFrecuente');
     }
     public function ticketsolicitud()
     {
-        return $this->hasOne('App\ticketsolicitud', 'ticketsolicitud');
+        return $this->hasOne('App\Ticketsolicitud', 'fkInvitadoTicket');
     }
     public function archivos()
     {
