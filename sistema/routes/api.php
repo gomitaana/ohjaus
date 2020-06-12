@@ -18,7 +18,8 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
         'condominios'=>'CondominiosController',
         'invitado'=>'InvitadoController',
         'contratos'=>'ContratosController',
-        'ticketsolicitud'=>'TicketsolicitudController'
+        'ticketsolicitud'=>'TicketsolicitudController',
+        'invitadosfrecuentes'=>'InvitadosfrecuentesController'
     ]);
 });
 
