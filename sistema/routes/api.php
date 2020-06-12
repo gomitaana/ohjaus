@@ -17,7 +17,8 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
     Route::apiResources([
         'condominios'=>'CondominiosController',
         'invitado'=>'InvitadoController',
-        'contratos'=>'ContratosController'
+        'contratos'=>'ContratosController',
+        'ticketsolicitud'=>'TicketsolicitudController'
     ]);
 });
 
