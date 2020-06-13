@@ -20,7 +20,8 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
         'contratos'=>'ContratosController',
         'ticketsolicitud'=>'TicketsolicitudController',
         'casas'=>'CasasController',
-        'invitadosfrecuentes'=>'InvitadosfrecuentesController'
+        'invitadosfrecuentes'=>'InvitadosfrecuentesController',
+        'reportes'=>'ReportesController'
     ]);
 });
 
