@@ -31,7 +31,7 @@ class Invitado extends Model
 
     public function invitadosfrecuentes()
     {
-        return $this->hasOne('App\Invitadosfrecuentes', 'fkInvitadoFrecuente');
+        return $this->hasOne('App\Invitadosfrecuentes', 'fkInvitadoInvitadoFrecuente');
     }
     public function ticketsolicitud()
     {
