@@ -31,7 +31,7 @@ class Casas extends Model
 
     public function invitadosfrecuentes()
     {
-        return $this->hasOne('App\InvitadosFrecuentes', 'fkCasaInvitadoFrecuente');
+        return $this->hasOne('App\Invitadosfrecuentes', 'fkCasaInvitadoFrecuente');
     }
     public function automovil()
     {
