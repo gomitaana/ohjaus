@@ -32,6 +32,5 @@ class Automovil extends Model
     {
         return $this->belongsTo('App\Casa', 'fkCasaAutomovil');
     }
-    
 
 }
