@@ -23,7 +23,8 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
         'invitadosfrecuentes'=>'InvitadosfrecuentesController',
         'reportes'=>'ReportesController',
         'registrovisita'=>'RegistrovisitaController',
-        'automovil'=>'AutomovilController'
+        'automovil'=>'AutomovilController',
+        'archivos'=>'ArchivosController'
     ]);
 });
 
